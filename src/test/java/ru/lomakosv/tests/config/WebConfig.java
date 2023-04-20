@@ -3,13 +3,14 @@ package ru.lomakosv.tests.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
+        "system:properties",
         "classpath:${env}.properties"}
 )
 public interface WebConfig extends Config {
 
     @Key("browser")
     @DefaultValue("chrome")
-    Browser browser();
+    String browser();
 
     @Key("browserVersion")
     String browserVersion();

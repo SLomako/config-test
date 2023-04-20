@@ -1,9 +1,7 @@
 package ru.lomakosv.tests;
 
 
-import net.bytebuddy.implementation.bind.annotation.Default;
-import org.aeonbits.owner.Config;
-import org.aeonbits.owner.ConfigFactory;
+import org.aeonbits.owner.ConfigCache;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 @DisplayName("Тест сайта qa.quru")
 public class QaGuruTest extends TestBase {
 
-    private static final WebConfig webconfig = ConfigFactory.create(WebConfig.class, System.getProperties());
+    private static final WebConfig webconfig = ConfigCache.getOrCreate(WebConfig.class, System.getProperties());
 
     @DisplayName("Проверка содержания заголовка заглавной страницы")
     @Test
