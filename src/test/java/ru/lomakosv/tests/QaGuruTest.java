@@ -14,7 +14,6 @@ import static io.qameta.allure.Allure.step;
 @DisplayName("Тест сайта qa.quru")
 public class QaGuruTest extends TestBase {
 
-
     @DisplayName("Проверка содержания заголовка заглавной страницы")
     @Test
     void testHeadTitle() {
